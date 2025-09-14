@@ -1,0 +1,85 @@
+{
+    "model_info": "Template for describing your machine learning model and task. Replace with specific details about your model architecture, dataset, and training approach.",
+    "optimization_goal": "Maximize the primary metric to achieve the best model performance. Specify whether to maximize (e.g., accuracy, F1-score) or minimize (e.g., loss, error rate) your target metric.",
+    "dataset_info": "Description of your dataset including data types, preprocessing steps, augmentation techniques, and any domain-specific considerations that affect hyperparameter tuning.",
+    "hyperparameters": {
+        "learning_rate": {
+            "description": "Learning rate controls the step size for gradient-based optimization. Critical hyperparameter that affects convergence speed and final performance.",
+            "guide": "must follow the range that is given below for choosing the value of its hyperparameter.",
+            "type": "float",
+            "range": [0.0001, 0.1],
+            "default": 0.001,
+            "log_scale": true
+        },
+        "batch_size": {
+            "description": "Number of samples processed simultaneously during training. Affects gradient stability, memory usage, and convergence behavior.",
+            "guide": "must choose from the ordinal options provided below.",
+            "type": "ordinal",
+            "values": [16, 32, 64, 128, 256, 512],
+            "range": [16, 512],
+            "default": 32
+        },
+        "epochs": {
+            "description": "Number of complete passes through the training dataset. Controls training duration and convergence.",
+            "guide": "must follow the range that is given below for choosing the value of its hyperparameter.",
+            "type": "integer",
+            "range": [10, 200],
+            "default": 50
+        },
+        "weight_decay": {
+            "description": "L2 regularization parameter that penalizes large weights to prevent overfitting. Higher values provide stronger regularization.",
+            "guide": "must follow the range that is given below for choosing the value of its hyperparameter.",
+            "type": "float",
+            "range": [0.0, 0.01],
+            "default": 0.0001,
+            "log_scale": true
+        },
+        "momentum": {
+            "description": "Momentum parameter for SGD optimizer. Helps accelerate gradients in consistent directions and dampens oscillations.",
+            "guide": "must follow the range that is given below for choosing the value of its hyperparameter.",
+            "type": "float",
+            "range": [0.0, 1.0],
+            "default": 0.9
+        },
+        "dropout_rate": {
+            "description": "Dropout probability for regularization. Randomly sets fraction of inputs to zero during training to prevent overfitting.",
+            "guide": "must follow the range that is given below for choosing the value of its hyperparameter.",
+            "type": "float",
+            "range": [0.0, 0.5],
+            "default": 0.0
+        },
+        "hidden_units": {
+            "description": "Number of units in hidden layers. Controls model capacity and representation learning capability.",
+            "guide": "must follow the range that is given below for choosing the value of its hyperparameter.",
+            "type": "integer",
+            "range": [64, 1024],
+            "default": 256
+        },
+        "optimizer": {
+            "description": "Optimization algorithm for training. Different optimizers have varying convergence properties and hyperparameter sensitivity.",
+            "guide": "must choose from the categorical options provided below.",
+            "type": "categorical",
+            "values": ["adam", "sgd", "rmsprop", "adamw"],
+            "default": "adam"
+        },
+        "activation": {
+            "description": "Activation function for neural network layers. Affects gradient flow and model expressiveness.",
+            "guide": "must choose from the categorical options provided below.",
+            "type": "categorical",
+            "values": ["relu", "tanh", "sigmoid", "gelu", "swish"],
+            "default": "relu"
+        },
+        "model_size": {
+            "description": "Overall model size category affecting architecture complexity and computational requirements.",
+            "guide": "must choose from the ordinal options provided below.",
+            "type": "ordinal",
+            "values": ["small", "medium", "large", "xlarge"],
+            "default": "medium"
+        }
+    },
+    "metrics": {
+        "primary_metric": "val_accuracy",
+        "description": "Primary metric used for hyperparameter optimization. This should match the metric name that your model training script reports in the results.json file."
+    },
+    "previous_trajectories": []
+}
