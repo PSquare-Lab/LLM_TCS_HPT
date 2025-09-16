@@ -1,8 +1,3 @@
-"""
-Generalized Training Results Analyzer - Works with any primary metric
-Provides concise, actionable insights for any ML model type
-"""
-
 import json
 import ollama
 import os
