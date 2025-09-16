@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Generic ML Hyperparameter Optimization Pipeline
 # This script runs the optimization loop for any ML model.
 
 # Configuration
@@ -11,9 +10,6 @@ export MIN_IMPROVEMENT_THRESHOLD=0.01
 export PROJECT_NAME="Deepfm LLM: ${LLM_MODEL} Iterations: ${MAX_ITERATIONS}"
 export TEMP_DIR="${TEMP_DIR:-temp}"
 # export TEMP_DIR="temp"  # Directory for temporary files, can be overridden by environment variable
-# export PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:128,expandable_segments:True
-# export CUDA_VISIBLE_DEVICES=0
-# export PYTORCH_NO_CUDA_MEMORY_CACHING=1
 
 
 echo "Starting Generic ML Hyperparameter Optimization Pipeline"
