@@ -1,10 +1,4 @@
 #!/usr/bin/env python3
-"""
-Generalized Hyperparameter Optimizer - Works with any primary metric
-
-This script generates hyperparameters based on structured analysis rather than
-raw trajectory data, optimized for any ML model and metric type.
-"""
 
 import ollama
 import json

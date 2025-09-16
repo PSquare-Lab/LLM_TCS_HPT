@@ -1,12 +1,6 @@
 #!/usr/bin/env python3
 """
 Text Classification on SST2 (Stanford Sentiment Treebank binary classification) dataset using DistilBERT.
-Following the standards and hyperparameters from the paper "AgentHPO: Large Language Model Agent for Hyper-Parameter Optimization".
-
-- Strictly enforces hyperparameter ranges as specified in Table 2 of the paper
-- Always uses binary mode for SST2 (no neutral examples)
-- Validates all hyperparameters against the defined search space
-- Saves accuracy as the primary metric as specified in the paper
 """
 
 import os

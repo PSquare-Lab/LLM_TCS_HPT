@@ -72,7 +72,7 @@ while [ $ITERATION -lt $MAX_ITERATIONS ]; do
     # Step 3: Analyze results
     echo "Step 3: Analyzing training results..."
     export PREVIOUS_HYPERPARAMETERS=$(cat ${TEMP_DIR}/hyperparameters.json)
-    if ! python3 results_analyzer_latest.py; then
+    if ! python3 Recommenderengine.py; then
         echo "Error: Failed to analyze results"
         exit 1
     fi
