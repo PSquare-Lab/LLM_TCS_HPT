@@ -1,4 +1,4 @@
-# LLM Hyperparameter Optimization
+# LLM Hyperparameter Tuning
 
 A comprehensive, beginner-friendly framework for optimizing machine learning model hyperparameters using Large Language Models. This system automatically generates, tests, and analyzes hyperparameter configurations to improve your model's performance.
 
